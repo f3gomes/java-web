@@ -52,6 +52,6 @@ public class JogoBean implements Serializable {
     }
 
     public String getQuantidadeJogos() {
-        return String.valueOf(jogos.size());
+        return jogos != null ? String.valueOf(jogos.size()) : "0" ;
     }
 }

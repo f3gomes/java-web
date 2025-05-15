@@ -36,14 +36,14 @@
 	        </p:column>
 	
 	        <p:column headerText="Ações">
-	            <p:commandButton value="Excluir" action="#{JogoBean.excluirJogo(jogo)}" update=":formMensagem:messages, tabelaDeJogos, quantidade" />
+	            <p:commandButton value="Excluir" action="#{JogoBean.excluirJogo(jogo)}" update=":formMensagem:tabelaDeJogos, :formMensagem:quantidade" />
 	        </p:column>
+	        
 	    </p:dataTable>
 		
 		<br />    
-		<p:messages>
-        	Total de Jogos: <h:outputText id="quantidade" value="#{JogoBean.getQuantidadeJogos()}" />
-		</p:messages>
+		<h:outputText id="quantidade" value="Total de jogos: #{JogoBean.getQuantidadeJogos()}" />
+
     </h:form>	
 	
     <br />
