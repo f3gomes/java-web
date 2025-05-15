@@ -32,7 +32,7 @@ public class JogoBean {
         jogo.setId(proximoId++);
         jogo.setData(new Date());
         jogo.setNumeroSecreto(random.nextInt(5) + 1);
-        jogo.setResultado(jogo.getNumeroAposta().equals(jogo.getNumeroSecreto()) ? "acertou" : "não acertou");
+        jogo.setResultado(jogo.getNumeroAposta() == jogo.getNumeroSecreto() ? "acertou" : "não acertou");
 
         jogos.add(jogo);
         jogo = new Jogo();
