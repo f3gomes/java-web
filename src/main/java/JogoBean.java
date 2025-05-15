@@ -37,12 +37,15 @@ public class JogoBean {
         jogos.add(jogo);
         jogo = new Jogo();
 
-        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Sucesso!", "Jogo cadastrado."));
+        FacesContext context = FacesContext.getCurrentInstance();
+        context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Sucesso!", "Jogo cadastrado."));
     }
 
     public void excluirJogo(Jogo jogoExcluir) {
         jogos.remove(jogoExcluir);
-        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Sucesso!", "Jogo excluído."));
+        
+        FacesContext context = FacesContext.getCurrentInstance();
+        context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Sucesso!", "Jogo excluído."));
     }
 
     public String getQuantidadeJogos() {

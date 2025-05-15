@@ -1,9 +1,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <h:html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:f="http://xmlns.jcp.org/jsf/core"
-      xmlns:p="http://primefaces.org/ui">
+		xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+		xmlns:h="http://xmlns.jcp.org/jsf/html"
+		xmlns:p="http://primefaces.org/ui"
+		xmlns:f="http://xmlns.jcp.org/jsf/core">
 
 <h:head>
     <title>Jogo APS - Unifametro</title>
@@ -15,10 +16,10 @@
     <h:form id="cadastroForm">
         <p:panelGrid columns="2">
             <h:outputLabel value="Nome do jogador:" />
-            <p:inputText value="#{JogoBean.jogo.nomeJogador}" />
+            <p:inputText value="#{JogoBean.jogo.nomeJogador}" required="true" />
 
             <h:outputLabel value="Número aposta:" />
-            <p:inputText value="#{JogoBean.jogo.numeroAposta}" converter="javax.faces.Integer" />
+            <p:inputText value="#{JogoBean.jogo.numeroAposta}" converter="javax.faces.Integer" required="true" />
 
             <h:commandButton value="Salvar" action="#{JogoBean.salvarJogo()}" update="@form :messages" />
         </p:panelGrid>
