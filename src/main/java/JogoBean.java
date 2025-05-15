@@ -1,5 +1,3 @@
-
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -9,14 +7,10 @@ import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
-import javax.faces.event.NamedEvent;
 
-@NamedEvent
 @SessionScoped
 @ManagedBean(name = "JogoBean")
-public class JogoBean implements Serializable {
-
-    private static final long serialVersionUID = 1L;
+public class JogoBean {
     private List<Jogo> jogos = new ArrayList<>();
     private Jogo jogo = new Jogo();
     private Integer proximoId = 1;
